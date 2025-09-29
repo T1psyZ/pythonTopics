@@ -1,0 +1,7 @@
+inputCelcius = input("Enter temperature in Celcius: ")
+convertCelcius = float(inputCelcius)
+fahrenheit = (convertCelcius * 9/5) + 32
+kelvin = convertCelcius + 273.15
+print(f"{convertCelcius} Celcius is {fahrenheit} Fahrenheit")
+print(f"Is {fahrenheit} Fahrenheit room temperature? {(34.5 < fahrenheit) and (fahrenheit < 50)}")
+print(f"{fahrenheit} Fahrenheit is higher than {kelvin}? {fahrenheit > kelvin } ")

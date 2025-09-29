@@ -1,0 +1,9 @@
+	
+inputHeight, inputKilograms  = float(input("Enter height in centimeters: ")), int(input("Enter weight in kilograms: "))
+convertHeight = inputHeight / 100
+convertKilograms = float(inputKilograms)
+print(f"Your height [{inputHeight}] in meter is {convertHeight} \nYour weight in kilograms is {convertKilograms}kg")
+bmiFormula =  convertKilograms / convertHeight ** 2
+print(f"Your BMI is : {bmiFormula}")
+bmiRange1, bmiRange2 =  18.5,  24.9
+print(f"Are you within the normal range? {  bmiRange2 >= bmiFormula >= bmiRange1 } ")

@@ -1,0 +1,18 @@
+print("Temperature Conversion Program \n1- Convert Celsius to Fahrenheit\n2- Convert Fahrenheit to Celcius\n3- Convert Celsius to kelvin")
+
+choiceIput = float(input("Enter your choice [1-3]: "))
+
+if choiceIput == 1: #condition if the chosen number is 1
+    userInput = float(input("Enter temperature in Celsius: "))
+    Fahrenheit = userInput * 9/5 + 32
+    print(f"{userInput}°C is equal to {Fahrenheit}°F")
+elif choiceIput == 2:#condition if the chosen number is 2
+    userInput = float(input("Enter temperature in Fahrenheit: "))
+    Celsius = (userInput - 32) * 5/9
+    print(f"{userInput}°C is equal to {Celsius}°C")
+elif choiceIput == 3:#condition if the chosen number is 3
+    userInput = float(input("Enter temperature in Celsius: "))
+    Kelvin = userInput + 273.15
+    print(f"{userInput}°C is equal to {Kelvin} K")
+else:#If the chosen number is not in the condition
+    print("Invalid selection.")

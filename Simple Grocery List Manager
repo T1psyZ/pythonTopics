@@ -1,0 +1,78 @@
+groceryItems = ["milk", "bread", "eggs", "oil", "rice", "coffee", "sugar"]
+print("Grocery List Manager")
+print("1 - View an item \n2 - Update an item \n3 - Add a new item\n4 - Remove an Item")
+
+userInput = input("Enter your choice [1 - 4]: ")
+if int(userInput) == 1:
+    positionInput = input("Enter the position (0 - 6): ")
+    if int(positionInput) == 0:
+        print("Item at position" + " " + str(positionInput) + " is " + str(groceryItems[0]) + ".")
+    elif int(positionInput) == 1:
+        print("Item at position" + " " + str(positionInput) + " is " + str(groceryItems[1]) + ".")
+    elif int(positionInput) == 2:
+        print("Item at position" + " " + str(positionInput) + " is " + str(groceryItems[2]) + ".")
+    elif int(positionInput) == 3:
+        print("Item at position" + " " + str(positionInput) + " is " + str(groceryItems[3]) + ".")
+    elif int(positionInput) == 4:
+        print("Item at position" + " " + str(positionInput) + " is " + str(groceryItems[4]) + ".")
+    elif int(positionInput) == 5:
+        print("Item at position" + " " + str(positionInput) + " is " + str(groceryItems[5]) + ".")
+    elif int(positionInput) == 6:
+        print("Item at position" + " " + str(positionInput) + " is " + str(groceryItems[6]) + ".")
+    else:
+        print("Invalid Input please try agian.")
+    print("\nUpdated Grocery List: " + str(groceryItems))
+elif int(userInput) == 2:
+    updatePosition = input("Enter the position to update (0 - 6): ")
+    if int(updatePosition) == 0:
+        newUpdatedItem = input("Enter the new item: ")
+        print("Item updated successfully!")
+        groceryItems[int(updatePosition)] = newUpdatedItem
+        print("\nUpdated Grocery List: " + str(groceryItems))
+    elif int(updatePosition) == 1:
+        newUpdatedItem = input("Enter the new item: ")
+        print("Item updated successfully!")
+        groceryItems[int(updatePosition)] = newUpdatedItem
+        print("\nUpdated Grocery List: " + str(groceryItems))
+    elif int(updatePosition) == 2:
+        newUpdatedItem = input("Enter the new item: ")
+        print("Item updated successfully!")
+        groceryItems[int(updatePosition)] = newUpdatedItem
+        print("\nUpdated Grocery List: " + str(groceryItems))
+    elif int(updatePosition) == 3:
+        newUpdatedItem = input("Enter the new item: ")
+        print("Item updated successfully!")
+        groceryItems[int(updatePosition)] = newUpdatedItem
+        print("\nUpdated Grocery List: " + str(groceryItems))
+    elif int(updatePosition) == 4:
+        newUpdatedItem = input("Enter the new item: ")
+        print("Item updated successfully!")
+        groceryItems[int(updatePosition)] = newUpdatedItem
+        print("\nUpdated Grocery List: " + str(groceryItems))
+    elif int(updatePosition) == 5:
+        newUpdatedItem = input("Enter the new item: ")
+        print("Item updated successfully!")
+        groceryItems[int(updatePosition)] = newUpdatedItem
+        print("\nUpdated Grocery List: " + str(groceryItems))
+    elif int(updatePosition) == 6:
+        newUpdatedItem = input("Enter the new item: ")
+        print("Item updated successfully!")
+        groceryItems[int(updatePosition)] = newUpdatedItem
+        print("\nUpdated Grocery List: " + str(groceryItems))
+    else:
+        print("Invalid Input please try agian.")
+elif int(userInput) == 3:
+    addItemInput = input("Enter the new item to add: ")
+    groceryItems.append(addItemInput)
+    print("Item added successfully!")
+    print("\nUpdated Grocery List: " + str(groceryItems))
+elif int(userInput) == 4:
+    removeItemInput = input("Enter the item to remove: ")
+    groceryItems.remove(removeItemInput)
+    print("Item removed successfully!")
+    print("\nUpdated Grocery List: " + str(groceryItems))
+
+else:
+    print("Invalid Input please try agian.")
+
+    

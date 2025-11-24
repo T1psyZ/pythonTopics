@@ -6,9 +6,9 @@ userChoiceInput = input("Enter your choice [1 - 4]: ")
 
 #VIEW
 if int(userChoiceInput) == 1:
-    positionInput = input("Enter a movie number (0 - 6): ")
-    if int(positionInput) < len(movieLists):
-        print("Movie at position" + " " + str(positionInput) + " is " + str(movieLists[int(positionInput)]) + ".")
+    movieNumberInput = input("Enter a movie number (0 - 6): ")
+    if int(movieNumberInput) <= len(movieLists):
+        print("Movie at position" + " " + str(movieNumberInput) + " is " + str(movieLists[int(movieNumberInput)]) + ".")
     else:
         print("Invalid Input please try agian.")
     print("\nUpdated Movie List: " + str(movieLists))
@@ -16,7 +16,7 @@ if int(userChoiceInput) == 1:
 #UPDATE
 elif int(userChoiceInput) == 2:
     updatePosition = input("Enter a movie number (0 - 6): ")
-    if int(updatePosition) < len(movieLists):
+    if int(updatePosition) <= len(movieLists):
         newUpdatedItem = input("Enter the new movie title: ")
         print("Movie updated successfully!")
         movieLists[int(updatePosition)] = newUpdatedItem
@@ -37,10 +37,6 @@ elif int(userChoiceInput) == 4:
     movieLists.pop(removeMovieInput)
     print("Movie removed successfully!")
     print("\nUpdated Movie List: " + str(movieLists))
-
-#View all movie list 
-"""elif int(userChoiceInput) == 5:
-        print(movieLists)"""
-
+    
 else:
     print("Invalid Input please try agian.")

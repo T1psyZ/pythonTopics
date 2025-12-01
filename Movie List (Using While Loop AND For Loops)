@@ -2,28 +2,32 @@ movieLists = []
     
 print("Movie List Manager")
 
-
 while True:
     print("View a movie [1]")
-    print("Add a movie [2]\n")
+    print("Add a movie [2]")
+    print("Type [0] to Exit")
     userChoiceInput = input("Enter your choice [1 - 2]: ")
 #VIEW A MOVIE
-    if int(userChoiceInput) == 1:
-        
+    if userChoiceInput == '1': 
         if len(movieLists) == 0:
             print("U dont have a movie yet.")
         else:
-            len(movieLists) >= 1    
-            for items, listMovies in enumerate(movieLists): 
-                print(items, listMovies)
-        
+            i = 0  
+            for listMovies in movieLists: 
+                i = i + 1 
+                print(i, listMovies)
+
 #ADD A MOVIE        
-    elif int(userChoiceInput) == 2:
+    elif userChoiceInput == '2':
         addMovieInput = input("Enter the name of the new movie: ")
-        movieLists.append(str(addMovieInput))
+        movieLists.append(addMovieInput) 
         print("Movie added successfully!\n")
+
+    elif userChoiceInput == '0':
+        print("Goodbye!")
+        break
     else:
-        print("Invalid Input pls try again (Only 1 and 2)")
+        print("Invalid Input pls try again (Only 1 and 2 or 0)")
 
 
 
